@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Weather</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+              />
+              <div class="current">
+                <input
+                  type="submit"
+                  value="Current"
+                  class="form-control btn btn-primary shadow-sm"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+        <h1 id="city">
+          Santa Cruz de Tenerife
+        </h1>
+        <ul>
+          <li id="date"></li>
+          <li>
+            Mild
+          </li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+              <img
+                src="https://www.freeiconspng.com/thumbs/weather-icon-png/weather-icon-png-8.png"
+                alt="Cloud_Sun"
+                class="weather-icon float-left"
+              />
+              <div class="float-left">
+                <span class="temperature" id="temperature">18</span
+                ><span class="units">
+                  <a href="#" id="celsius-link">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>
+                Precipitation: 28%
+              </li>
+              <li>
+                Humidity: 48%
+              </li>
+              <li>
+                Wind: 2 km/h
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
